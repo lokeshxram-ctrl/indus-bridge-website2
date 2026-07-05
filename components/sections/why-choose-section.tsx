@@ -1,38 +1,38 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ShieldCheck, MessageSquare, Eye, Monitor, User, TrendingDown } from 'lucide-react';
+import { ShieldCheck, Building2, Users, DollarSign, Clock, Headphones } from 'lucide-react';
 
-const benefits = [
+const features = [
   {
     icon: ShieldCheck,
     title: 'Verified Manufacturers',
-    description: 'Every supplier undergoes comprehensive verification before joining our network. No exceptions.',
+    description: 'Every supplier undergoes rigorous vetting and ongoing compliance monitoring.',
   },
   {
-    icon: MessageSquare,
-    title: 'Transparent Communication',
-    description: 'Real-time updates and clear documentation at every step. You always know where your order stands.',
+    icon: Building2,
+    title: 'On-site Audits',
+    description: 'Thorough facility inspections covering production, quality systems, and compliance.',
   },
   {
-    icon: Eye,
-    title: 'Dedicated Quality Control',
-    description: 'Multi-stage inspections by experienced quality professionals stationed in India.',
+    icon: Users,
+    title: 'Dedicated Quality Team',
+    description: 'Experienced inspectors stationed across India for real-time quality oversight.',
   },
   {
-    icon: Monitor,
-    title: 'Production Monitoring',
-    description: 'We track production progress daily and flag issues before they become delays.',
+    icon: DollarSign,
+    title: 'Transparent Pricing',
+    description: 'Clear, upfront costs with no hidden fees. Know exactly what you&apos;re paying for.',
   },
   {
-    icon: User,
-    title: 'One Point of Contact',
-    description: 'Your account manager handles everything. No supplier handoffs or communication gaps.',
+    icon: Clock,
+    title: 'Fast Turnaround',
+    description: 'Streamlined processes and strong supplier relationships for faster lead times.',
   },
   {
-    icon: TrendingDown,
-    title: 'Reduced Supplier Risk',
-    description: 'Our verification process eliminates bad suppliers before they can cost you money.',
+    icon: Headphones,
+    title: 'End-to-End Support',
+    description: 'Your dedicated account manager handles everything from sourcing to delivery.',
   },
 ];
 
@@ -51,17 +51,17 @@ export function WhyChooseSection() {
             Why IndUS Bridge
           </span>
           <h2 className="mt-4 text-heading-xl font-heading font-semibold text-midnight tracking-tight">
-            Why Businesses Choose IndUS Bridge
+            Your trusted sourcing partner
           </h2>
-          <p className="mt-4 text-base text-gray-500 max-w-xl mx-auto leading-relaxed">
-            Importing shouldn&apos;t be risky. We eliminate uncertainty by managing every stage of your sourcing journey.
+          <p className="mt-4 text-base text-gray-500 max-w-lg mx-auto">
+            We combine deep local expertise with rigorous quality standards.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {benefits.map((benefit, index) => (
+        <div className="grid-card-3">
+          {features.map((feature, index) => (
             <motion.div
-              key={benefit.title}
+              key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
@@ -73,13 +73,13 @@ export function WhyChooseSection() {
             >
               <div className="bg-white rounded-2xl p-6 lg:p-8 border border-gray-100 shadow-soft hover:shadow-soft-md hover:border-gray-200 transition-all duration-200 h-full">
                 <div className="w-10 h-10 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center mb-4 group-hover:bg-midnight group-hover:border-midnight transition-all duration-200">
-                  <benefit.icon className="w-5 h-5 text-midnight group-hover:text-white transition-colors duration-200" />
+                  <feature.icon className="w-5 h-5 text-midnight group-hover:text-white transition-colors duration-200" />
                 </div>
                 <h3 className="text-base font-medium text-midnight mb-2">
-                  {benefit.title}
+                  {feature.title}
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
-                  {benefit.description}
+                  {feature.description}
                 </p>
               </div>
             </motion.div>

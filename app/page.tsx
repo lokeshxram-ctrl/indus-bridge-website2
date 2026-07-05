@@ -2,16 +2,10 @@ import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import {
   HeroSection,
-  BusinessValueSection,
-  TimeSavingsSection,
-  ProblemSolutionSection,
-  ComparisonSection,
-  BusinessOutcomesSection,
-  BeforeAfterSection,
-  WhyChooseSection,
-  ServicesSection,
-  WhoWeHelpSection,
   HowItWorksSection,
+  IndustriesSection,
+  ServicesSection,
+  WhyChooseSection,
   OurPromiseSection,
   FAQSection,
   CTASection,
@@ -23,16 +17,10 @@ export default function HomePage() {
       <Navigation />
       <main>
         <HeroSection />
-        <BusinessValueSection />
-        <TimeSavingsSection />
-        <ProblemSolutionSection />
-        <ComparisonSection />
-        <BusinessOutcomesSection />
-        <BeforeAfterSection />
-        <WhyChooseSection />
-        <ServicesSection />
-        <WhoWeHelpSection />
         <HowItWorksSection />
+        <IndustriesSection />
+        <ServicesSection />
+        <WhyChooseSection />
         <OurPromiseSection />
         <FAQSection />
         <CTASection />
