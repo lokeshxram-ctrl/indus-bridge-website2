@@ -2,10 +2,12 @@ import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import {
   HeroSection,
-  HowItWorksSection,
-  IndustriesSection,
-  ServicesSection,
+  ProblemSolutionSection,
+  ComparisonSection,
   WhyChooseSection,
+  ServicesSection,
+  WhoWeHelpSection,
+  HowItWorksSection,
   OurPromiseSection,
   FAQSection,
   CTASection,
@@ -17,10 +19,12 @@ export default function HomePage() {
       <Navigation />
       <main>
         <HeroSection />
-        <HowItWorksSection />
-        <IndustriesSection />
-        <ServicesSection />
+        <ProblemSolutionSection />
+        <ComparisonSection />
         <WhyChooseSection />
+        <ServicesSection />
+        <WhoWeHelpSection />
+        <HowItWorksSection />
         <OurPromiseSection />
         <FAQSection />
         <CTASection />

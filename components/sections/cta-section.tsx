@@ -26,22 +26,32 @@ export function CTASection() {
             Get Started
           </span>
           <h2 className="mt-4 text-heading-xl font-heading font-semibold text-white tracking-tight">
-            Ready to source from India?
+            Ready to source with confidence?
           </h2>
           <p className="mt-6 text-base text-gray-400 leading-relaxed mb-10">
-            Join hundreds of U.S. businesses that trust IndUS Bridge for reliable, quality-focused sourcing.
+            Businesses trust IndUS Bridge because we verify suppliers, inspect quality, and manage logistics—eliminating the risk from international sourcing.
           </p>
 
-          <Button
-            size="lg"
-            asChild
-            className="bg-white text-midnight hover:bg-gray-100 h-12 px-8 rounded-xl font-medium shadow-soft transition-all duration-200"
-          >
-            <Link href="/request-quote">
-              Request a Quote
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              asChild
+              className="bg-white text-midnight hover:bg-gray-100 h-12 px-8 rounded-xl font-medium shadow-soft transition-all duration-200"
+            >
+              <Link href="/request-quote">
+                Get Your Free Sourcing Consultation
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-gray-600 text-gray-300 hover:bg-white/5 hover:border-gray-500 h-12 px-8 rounded-xl font-medium transition-all duration-200"
+            >
+              <Link href="/contact">Talk to a Sourcing Expert</Link>
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>
