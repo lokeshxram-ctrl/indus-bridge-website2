@@ -76,10 +76,10 @@ export function HeroSection() {
 
         {/* Subtle grid */}
         <div
-          className="absolute inset-0 opacity-[0.015}"
+          className="absolute inset-0 opacity-[0.008}"
           style={{
-            backgroundImage: `linear-gradient(to right, #0B1F3A 1px, transparent 1px),
-                             linear-gradient(to bottom, #0B1F3A 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(to right, #0B1F3A 1px, transparent 0.5x),
+                             linear-gradient(to bottom, #0B1F3A 1px, transparent 0.5px)`,
             backgroundSize: '80px 80px',
           }}
         />
