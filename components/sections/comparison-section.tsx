@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Check, Minus } from 'lucide-react';
+import { Check, Minus, ArrowRight } from 'lucide-react';
 
 const comparisonData = [
   { feature: 'Verified manufacturers', us: true, alibaba: false, agent: 'partial' },
@@ -50,7 +50,7 @@ export function ComparisonSection() {
             Why Businesses Choose IndUS Bridge
           </h2>
           <p className="mt-4 text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Anyone can list suppliers. Very few take complete ownership from sourcing to warehouse delivery.
+            Anyone can connect you with suppliers. Very few take complete ownership from supplier discovery to warehouse delivery.
           </p>
         </motion.div>
 
@@ -59,7 +59,7 @@ export function ComparisonSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto mb-12"
         >
           <div className="bg-white rounded-2xl border border-gray-100 shadow-soft overflow-hidden">
             {/* Table Header */}
@@ -100,6 +100,33 @@ export function ComparisonSection() {
                 </div>
               </div>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Result highlight */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.5 }}
+          className="max-w-xl mx-auto text-center"
+        >
+          <div className="inline-flex items-center gap-2 text-sm text-gray-400 mb-4">
+            <span>The result?</span>
+          </div>
+          <div className="space-y-3">
+            <div className="flex items-center justify-center gap-2 text-base text-midnight font-medium">
+              <Check className="w-4 h-4" />
+              Less operational work
+            </div>
+            <div className="flex items-center justify-center gap-2 text-base text-midnight font-medium">
+              <Check className="w-4 h-4" />
+              Lower supplier risk
+            </div>
+            <div className="flex items-center justify-center gap-2 text-base text-midnight font-medium">
+              <Check className="w-4 h-4" />
+              More time to grow your business
+            </div>
           </div>
         </motion.div>
       </div>

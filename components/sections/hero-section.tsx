@@ -76,7 +76,7 @@ export function HeroSection() {
 
         {/* Subtle grid */}
         <div
-          className="absolute inset-0 opacity-[0.015]"
+          className="absolute inset-0 opacity-[0.015}"
           style={{
             backgroundImage: `linear-gradient(to right, #0B1F3A 1px, transparent 1px),
                              linear-gradient(to bottom, #0B1F3A 1px, transparent 1px)`,
@@ -140,16 +140,19 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="flex flex-wrap justify-center gap-4 mb-10"
+              className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10"
             >
               {trustBadges.map((badge, index) => (
-                <div
+                <motion.div
                   key={badge}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.55 + index * 0.08, duration: 0.3 }}
                   className="inline-flex items-center gap-2 bg-gray-50 border border-gray-100 px-4 py-2 rounded-full"
                 >
                   <Check className="w-4 h-4 text-midnight" />
                   <span className="text-sm font-medium text-midnight">{badge}</span>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
 
@@ -160,7 +163,7 @@ export function HeroSection() {
               transition={{ delay: 0.6, duration: 0.5 }}
               className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed mb-12"
             >
-              Connect with verified Indian manufacturers while we handle supplier discovery, factory audits, quality inspections, production monitoring, documentation, and logistics—all through one trusted platform.
+              Focus on growing your business while we manage your entire sourcing and supply chain—from supplier discovery to warehouse delivery.
             </motion.p>
 
             {/* CTAs */}
