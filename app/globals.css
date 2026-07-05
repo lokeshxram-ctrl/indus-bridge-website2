@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 60% - Whites and Light Grays */
+    --background: 0 0% 100%;
+    --foreground: 215 50% 14%;
+
+    /* Cards and surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 215 50% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 14%;
+
+    /* 30% - Midnight Blue Primary */
+    --primary: 215 70% 14%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light backgrounds */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 50% 14%;
+
+    /* Muted */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent */
+    --accent: 215 70% 14%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders - 10% Silver */
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 215 70% 14%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-white text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1, "kern" 1;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Headings use Manrope */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+
+  /* Better text rendering */
+  p {
+    @apply text-foreground leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+  }
+
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Enterprise card styling */
+  .card-enterprise {
+    @apply bg-white rounded-2xl border border-gray-200/60 shadow-soft transition-all duration-200;
+  }
+
+  .card-enterprise:hover {
+    @apply shadow-soft-md border-gray-200;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  /* Grid layouts */
+  .grid-card-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+
+  .grid-card-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .grid-card-4 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+}
+
+/* Custom selection color */
+::selection {
+  background-color: rgba(11, 31, 58, 0.1);
+  color: #0B1F3A;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C0C7D1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8B2BE;
+}
