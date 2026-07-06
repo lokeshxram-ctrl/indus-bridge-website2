@@ -179,7 +179,7 @@ export function HeroSection() {
                 className="bg-midnight hover:bg-midnight-50 text-white h-12 px-8 rounded-xl font-medium shadow-soft transition-all duration-200 hover:shadow-soft-md"
               >
                 <Link href="/request-quote">
-                  Request a Quote
+                  Get Your Free Sourcing Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
@@ -189,7 +189,7 @@ export function HeroSection() {
                 asChild
                 className="border-gray-200 text-midnight hover:bg-gray-50 hover:border-gray-300 h-12 px-8 rounded-xl font-medium transition-all duration-200"
               >
-                <Link href="/contact">Book a Free Consultation</Link>
+                <Link href="/request-quote">Request a Quote</Link>
               </Button>
             </motion.div>
           </motion.div>

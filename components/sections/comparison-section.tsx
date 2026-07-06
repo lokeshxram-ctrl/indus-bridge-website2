@@ -44,13 +44,13 @@ export function ComparisonSection() {
           className="text-center mb-16"
         >
           <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
-            The Difference
+            Why We&apos;re Different
           </span>
           <h2 className="mt-4 text-heading-xl font-heading font-semibold text-midnight tracking-tight">
             Why Businesses Choose IndUS Bridge
           </h2>
           <p className="mt-4 text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Anyone can connect you with suppliers. Very few take complete ownership from supplier discovery to warehouse delivery.
+            Anyone can introduce you to suppliers. We manage your complete sourcing journey—from supplier discovery to warehouse delivery.
           </p>
         </motion.div>
 

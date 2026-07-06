@@ -20,16 +20,16 @@ export function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5 }}
-          className="max-w-xl mx-auto text-center"
+          className="max-w-2xl mx-auto text-center"
         >
           <span className="text-xs font-medium text-silver uppercase tracking-wider">
             Get Started
           </span>
           <h2 className="mt-4 text-heading-xl font-heading font-semibold text-white tracking-tight">
-            Ready to source with confidence?
+            Ready to Source Smarter?
           </h2>
           <p className="mt-6 text-base text-gray-400 leading-relaxed mb-10">
-            Businesses trust IndUS Bridge because we verify suppliers, inspect quality, and manage logistics—eliminating the risk from international sourcing.
+            Let&apos;s discuss your sourcing requirements and build a reliable supply chain together.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -39,7 +39,7 @@ export function CTASection() {
               className="bg-white text-midnight hover:bg-gray-100 h-12 px-8 rounded-xl font-medium shadow-soft transition-all duration-200"
             >
               <Link href="/request-quote">
-                Get Your Free Sourcing Consultation
+                Request a Quote
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
@@ -49,7 +49,7 @@ export function CTASection() {
               asChild
               className="border-gray-600 text-gray-300 hover:bg-white/5 hover:border-gray-500 h-12 px-8 rounded-xl font-medium transition-all duration-200"
             >
-              <Link href="/contact">Talk to a Sourcing Expert</Link>
+              <Link href="/contact">Book a Consultation</Link>
             </Button>
           </div>
         </motion.div>

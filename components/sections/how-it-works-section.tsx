@@ -1,17 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FileQuestion, Search, Building2, PackageCheck, Factory, Eye, Ship, Warehouse } from 'lucide-react';
+import { FileQuestion, Search, Building2, PackageCheck, Truck, Warehouse } from 'lucide-react';
 
 const timelineSteps = [
-  { icon: FileQuestion, label: 'Requirement' },
-  { icon: Search, label: 'Supplier Discovery' },
-  { icon: Building2, label: 'Factory Audit' },
-  { icon: PackageCheck, label: 'Sampling' },
-  { icon: Factory, label: 'Production' },
-  { icon: Eye, label: 'Inspection' },
-  { icon: Ship, label: 'Shipping' },
-  { icon: Warehouse, label: 'Warehouse Delivery' },
+  { icon: FileQuestion, label: 'Tell Us What You Need', number: '01' },
+  { icon: Search, label: 'Supplier Discovery', number: '02' },
+  { icon: Building2, label: 'Factory Verification', number: '03' },
+  { icon: PackageCheck, label: 'Quality Inspection', number: '04' },
+  { icon: Truck, label: 'Logistics', number: '05' },
+  { icon: Warehouse, label: 'Warehouse Delivery', number: '06' },
 ];
 
 export function HowItWorksSection() {
@@ -29,7 +27,7 @@ export function HowItWorksSection() {
             How It Works
           </span>
           <h2 className="mt-4 text-heading-xl font-heading font-semibold text-midnight tracking-tight">
-            From requirement to warehouse delivery
+            Six Steps to Successful Sourcing
           </h2>
           <p className="mt-4 text-base text-gray-500 max-w-lg mx-auto">
             A structured process that keeps you informed at every milestone.
@@ -38,12 +36,11 @@ export function HowItWorksSection() {
 
         {/* Desktop Timeline */}
         <div className="hidden lg:block">
-          <div className="relative max-w-6xl mx-auto">
+          <div className="relative max-w-5xl mx-auto">
             {/* Connection line */}
-            <div className="absolute top-8 left-8 right-8 h-0.5 bg-gray-200" />
-            <div className="absolute top-8 left-8 h-0.5 bg-midnight" style={{ width: 'calc(100% - 16px)' }} />
+            <div className="absolute top-10 left-10 right-10 h-0.5 bg-gray-200" />
 
-            <div className="grid grid-cols-8 gap-2">
+            <div className="grid grid-cols-6 gap-4">
               {timelineSteps.map((step, index) => (
                 <motion.div
                   key={step.label}
@@ -51,17 +48,20 @@ export function HowItWorksSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{
-                    delay: index * 0.08,
+                    delay: index * 0.1,
                     duration: 0.4,
                   }}
                   className="relative text-center"
                 >
                   {/* Node */}
-                  <div className="relative z-10 w-16 h-16 mx-auto bg-white rounded-xl border-2 border-gray-100 flex items-center justify-center mb-4 group-hover:border-midnight transition-all duration-200">
-                    <step.icon className="w-5 h-5 text-midnight" />
+                  <div className="relative z-10 w-20 h-20 mx-auto bg-white rounded-2xl border border-gray-200 shadow-soft flex items-center justify-center mb-5 hover:border-gray-300 hover:shadow-soft-md transition-all duration-200">
+                    <div className="flex flex-col items-center gap-1">
+                      <step.icon className="w-5 h-5 text-midnight" />
+                      <span className="text-xs font-medium text-gray-400">{step.number}</span>
+                    </div>
                   </div>
                   {/* Label */}
-                  <span className="text-xs text-gray-600 font-medium leading-tight block px-1">
+                  <span className="text-sm text-gray-600 font-medium leading-tight block px-2">
                     {step.label}
                   </span>
                 </motion.div>
@@ -74,7 +74,7 @@ export function HowItWorksSection() {
         <div className="lg:hidden">
           <div className="relative max-w-sm mx-auto">
             {/* Connection line */}
-            <div className="absolute left-6 top-4 bottom-4 w-0.5 bg-gray-200" />
+            <div className="absolute left-8 top-4 bottom-4 w-0.5 bg-gray-200" />
 
             <div className="space-y-6">
               {timelineSteps.map((step, index) => (
@@ -84,15 +84,18 @@ export function HowItWorksSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: '-20px' }}
                   transition={{
-                    delay: index * 0.06,
+                    delay: index * 0.08,
                     duration: 0.4,
                   }}
                   className="relative flex items-start gap-4"
                 >
-                  <div className="relative z-10 w-12 h-12 bg-white rounded-xl border border-gray-100 flex items-center justify-center flex-shrink-0">
-                    <step.icon className="w-5 h-5 text-midnight" />
+                  <div className="relative z-10 w-16 h-16 bg-white rounded-xl border border-gray-100 shadow-soft flex items-center justify-center flex-shrink-0">
+                    <div className="flex flex-col items-center gap-1">
+                      <step.icon className="w-5 h-5 text-midnight" />
+                      <span className="text-xs font-medium text-gray-400">{step.number}</span>
+                    </div>
                   </div>
-                  <div className="pt-2">
+                  <div className="pt-4">
                     <span className="text-sm font-medium text-midnight">{step.label}</span>
                   </div>
                 </motion.div>
